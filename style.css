@@ -1,0 +1,27 @@
+#Calculator{
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'opertors opertors opertors opertors'
+    'main main main side'
+    'main main main side'
+    'main main main side'
+    'main main main side';
+    width: 70vw;
+    height: 80vh;
+    border: 3px solid black;
+    
+
+}
+#sum{
+    grid-area: header;
+    background-color: rgb(170, 168, 168);
+    color: aliceblue;
+    text-align: right;  
+}
+#Equal-BTN{
+    grid-area: side;
+    /* background-color: orange; */
+}
+/* .Numbers{
+} */

@@ -104,3 +104,28 @@
 //    }
 // }
 
+// function printUserNumbersResule() {
+
+//     let NumbersUser =document.getElementById("Numbers")
+//     switch (userOperator.value) {
+//         case "*":
+//             sum.innerHTML = NumbersUser * NumbersUser
+//             break;
+//         case "/":
+//             sum.innerHTML = NumbersUser * NumbersUser
+//             break;
+//         case "-":
+//             sum.innerHTML = NumbersUser * NumbersUser
+//             break;
+//         case "+":
+//             sum.innerHTML = NumbersUser * NumbersUser
+//             break;
+//         default:
+//             break;
+//     }    
+// }
+
+// function saveValueNumber(params) {
+    
+// }
+
