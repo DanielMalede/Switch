@@ -46,24 +46,25 @@
     <br> -->
 
     <div id="Calculator">
-        <div  id="sum">Ya bisssh</div>
-        <button class="Numbers" id="plus-BTN">+</button>
-        <button class="Numbers" id="minus-BTN">-</button>
-        <button class="Numbers" id="dual-BTN">x</button>
-        <button class="Numbers" id="Division-BTN">÷</button>
-        <button class="Numbers" id="Equal-BTN">=</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="One-BTN">1</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Two-BTN">2</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Three-BTN">3</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Four-BTN">4</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Five-BTN">5</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Six-BTN">6</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Seven-BTN">7</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Eigth-BTN">8</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Nine-BTN">9</button>
-        <button onclick="saveValueNumber()" class="Numbers" id="Zero-BTN">0</button>
-        <button class="Numbers" id="Dot-BTN">.</button>
-        <button class="Numbers" id="AC-BTN">AC</button>
+        <div  onclick="SavePreviousValue(previous)" id="previous">previous</div>
+        <div  onclick="SavecurrentValue(current)" id="current">current</div>
+        <button onclick="saveValueNumber(Plus)" id="Plus" value="+">+</button>
+        <button onclick="saveValueNumber(Minus)" id="Minus" value="-">-</button>
+        <button onclick="saveValueNumber(Double)" id="Double" value="*">*</button>
+        <button onclick="saveValueNumber(Division)" id="Division" value="/">÷</button>
+        <button onclick="saveValueNumber(Equal)" id="Equal" value="=">=</button>
+        <button onclick="saveValueNumber(One)" id="One" value="1">1</button>
+        <button onclick="saveValueNumber(Two)" id="Two" value="2">2</button>
+        <button onclick="saveValueNumber(Three)" id="Three" value="3">3</button>
+        <button onclick="saveValueNumber(Four)" id="Four" value="4">4</button>
+        <button onclick="saveValueNumber(Five)" id="Five" value="5">5</button>
+        <button onclick="saveValueNumber(Six)" id="Six" value="6">6</button>
+        <button onclick="saveValueNumber(Seven)" id="Seven" value="7">7</button>
+        <button onclick="saveValueNumber(Eigth)" id="Eigth" value="8">8</button>
+        <button onclick="saveValueNumber(Nine)" id="Nine" value="9">9</button>
+        <button onclick="saveValueNumber(Zero)" id="Zero" value="0">0</button>
+        <button onclick="saveValueNumber(Dot)" id="Dot" value=".">.</button>
+        <button onclick="resetAC(Ac)" id="Ac" value="0">AC</button>
     </div>
     
     <script src="main.js"></script>

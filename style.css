@@ -2,26 +2,32 @@
     display: grid;
     grid-template-areas: 
     'header header header header'
+    'header1 header1 header1 header1'
     'opertors opertors opertors opertors'
     'main main main side'
     'main main main side'
     'main main main side'
     'main main main side';
-    width: 70vw;
-    height: 80vh;
     border: 3px solid black;
+    height: 50vh;
+    width: 30vw;
     
 
 }
-#sum{
+#previous{
     grid-area: header;
     background-color: rgb(170, 168, 168);
     color: aliceblue;
-    text-align: right;  
+    text-align: right; 
 }
-#Equal-BTN{
+#current{
+    grid-area: header1;
+    background-color: rgb(170, 168, 168);
+    color: aliceblue;
+    text-align: right; 
+    font-size: xx-large; 
+
+}
+#Equal{
     grid-area: side;
-    /* background-color: orange; */
 }
-/* .Numbers{
-} */

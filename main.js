@@ -10,7 +10,7 @@
 //         case 7:
 //             console.log("Thanks");
 //             break;
-    
+
 //         default:
 //             console.log("No Massge");
 //             break;
@@ -31,7 +31,7 @@
 //         case "DALYA":
 //             h1_line.innerText ="dalya";
 //             break;
-    
+
 //         default:
 //             h1_line.innerText ="No Massage";
 //             break;
@@ -82,11 +82,11 @@
 //             "top:100vh; height:100px; width:100px; top:0px; left:0px; background-color:"+inputColor.value
 
 //             break;
-    
+
 //         default:
 //             break;
 //     }
-    
+
 // }
 
 // function printTextUser() {
@@ -125,7 +125,97 @@
 //     }    
 // }
 
-// function saveValueNumber(params) {
-    
-// }
 
+
+
+
+
+
+let arrayNumber1 = ""
+let arrayNumber2 = ""
+let arrayAllNumbers = ""
+let sumNumbers = "";
+let summer = ""
+console.log();
+function saveValueNumber(num) {
+    switch (num.value) {
+        case "1":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "2":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "3":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "4":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "5":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "6":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "7":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "8":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "9":
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+        case "+":
+            arrayNumber2 = arrayNumber1
+            if (arrayNumber2.length>0) {
+                arrayAllNumbers = +arrayNumber1 + 
+                previous.innerText = arrayAllNumbers   
+                arrayNumber1 = ""             
+            }
+            break;
+        case "-":
+            arrayNumber2 += arrayNumber1
+            current.innerHTML = ""
+            arrayNumber1 = ""
+            previous.innerText = arrayNumber2
+            break;
+        case "/":
+            arrayNumber2 = parseInt(arrayNumber2) / parseInt(arrayNumber1)
+            sumNumbers = arrayNumber2
+            previous.innerText = sumNumbers
+            current.innerHTML = ""
+            arrayNumber1 = ""
+            break;
+        case "*":
+            arrayNumber2 += arrayNumber1
+            current.innerHTML = ""
+            arrayNumber1 = ""
+            previous.innerText = arrayNumber2
+            break;
+    }
+    // console.log(arrayNumber2);
+    // console.log(arrayNumber1);
+    // console.log(sumNumbers);
+
+
+
+}
+console.log(arrayNumber1 + "arrayNumber1");
+console.log(sumNumbers + "sumNumbers");
+console.log(summer + "summer");
+function resetAC() {
+    arrayNumber1 = ""
+    current.innerText = ""
+
+
+}
