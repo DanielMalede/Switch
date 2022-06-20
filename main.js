@@ -131,91 +131,98 @@
 
 
 
-let arrayNumber1 = ""
-let arrayNumber2 = ""
-let arrayAllNumbers = ""
-let sumNumbers = "";
-let summer = ""
+let arrayNumber1 = "";
+let AllNumbers = [];
+let operator = [];
+let num1;
 console.log();
 function saveValueNumber(num) {
+    switch (num.value * 0) {
+        case 0:
+            arrayNumber1 += num.value
+            current.innerHTML = arrayNumber1
+            break;
+    }
     switch (num.value) {
-        case "1":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
-        case "2":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
-        case "3":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
-        case "4":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
-        case "5":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
-        case "6":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
-        case "7":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
-        case "8":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
-        case "9":
-            arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
-            break;
         case "+":
-            arrayNumber2 = arrayNumber1
-            if (arrayNumber2.length>0) {
-                arrayAllNumbers = +arrayNumber1 + 
-                previous.innerText = arrayAllNumbers   
-                arrayNumber1 = ""             
+            if (arrayNumber1[arrayNumber1.length - 1] * 0 == 0) {
+                arrayNumber1 += num.value
+                current.innerHTML = arrayNumber1
             }
             break;
         case "-":
-            arrayNumber2 += arrayNumber1
-            current.innerHTML = ""
-            arrayNumber1 = ""
-            previous.innerText = arrayNumber2
-            break;
-        case "/":
-            arrayNumber2 = parseInt(arrayNumber2) / parseInt(arrayNumber1)
-            sumNumbers = arrayNumber2
-            previous.innerText = sumNumbers
-            current.innerHTML = ""
-            arrayNumber1 = ""
+            if (arrayNumber1[arrayNumber1.length - 1] * 0 == 0) {
+                arrayNumber1 += num.value
+                current.innerHTML = arrayNumber1
+            }
             break;
         case "*":
-            arrayNumber2 += arrayNumber1
-            current.innerHTML = ""
-            arrayNumber1 = ""
-            previous.innerText = arrayNumber2
+            if (arrayNumber1[arrayNumber1.length - 1] * 0 == 0) {
+                arrayNumber1 += num.value
+                current.innerHTML = arrayNumber1
+            }
+            break;
+        case "/":
+            if (arrayNumber1[arrayNumber1.length - 1] * 0 == 0) {
+                arrayNumber1 += num.value
+                current.innerHTML = arrayNumber1
+            }
             break;
     }
-    // console.log(arrayNumber2);
-    // console.log(arrayNumber1);
-    // console.log(sumNumbers);
-
-
-
 }
-console.log(arrayNumber1 + "arrayNumber1");
-console.log(sumNumbers + "sumNumbers");
-console.log(summer + "summer");
-function resetAC() {
-    arrayNumber1 = ""
-    current.innerText = ""
 
-
+let num2 = ""
+let result;
+function summm() {
+    for (let i = 0; i < arrayNumber1.length; i++) {
+        switch (arrayNumber1[i]) {
+            case "+":
+                AllNumbers.push(num1)
+                num2 = " "
+                operator.push(arrayNumber1[i])
+                break;
+            case "-":
+                AllNumbers.push(num1)
+                num2 = " "
+                operator.push(arrayNumber1[i])
+                break;
+            case "/":
+                AllNumbers.push(num1)
+                num2 = " "
+                operator.push(arrayNumber1[i])
+                break;
+            case "*":
+                AllNumbers.push(num1)
+                num2 = " "
+                operator.push(arrayNumber1[i])
+                break;
+            default:
+                num2 += arrayNumber1[i]
+                break;
+            }
+        }   
+        for (let i = 0; i < AllNumbers.length; i++) {
+                        
+        }
+        switch (key) {
+            case value:
+                
+                break;
+        
+            default:
+                break;
+        }     
 }
+
+function resetAC(ac) {
+    switch (ac.value) {
+        case "AC":
+            current.innerHTML = ""
+            arrayNumber1 = ""
+            break;
+        default:
+            break;
+    }
+}
+
+
