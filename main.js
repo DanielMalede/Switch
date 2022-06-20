@@ -132,11 +132,11 @@
 
 
 let arrayNumber1 = "";
-let AllNumbers = [];
 let operator = [];
 let num1;
 console.log();
 function saveValueNumber(num) {
+    let AllNumbers = [];
     switch (num.value * 0) {
         case 0:
             arrayNumber1 += num.value
@@ -168,12 +168,8 @@ function saveValueNumber(num) {
                 current.innerHTML = arrayNumber1
             }
             break;
-    }
-}
 
-let num2 = ""
-let result;
-function summm() {
+    }
     for (let i = 0; i < arrayNumber1.length; i++) {
         switch (arrayNumber1[i]) {
             case "+":
@@ -199,19 +195,25 @@ function summm() {
             default:
                 num2 += arrayNumber1[i]
                 break;
-            }
-        }   
-        for (let i = 0; i < AllNumbers.length; i++) {
-                        
         }
-        switch (key) {
-            case value:
-                
+    }
+    let result = arrayNumber1[0];
+    for (let i = 0; i < arrayNumber1.length; i++) {
+        // switch (arrayNumber1[i]) {
+            case "+":
+                result +=
                 break;
-        
+
             default:
+
                 break;
-        }     
+        }
+    }
+    console.log(AllNumbers);
+}
+
+let num2 = ""
+function summm() {
 }
 
 function resetAC(ac) {
