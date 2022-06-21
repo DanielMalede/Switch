@@ -132,85 +132,92 @@
 
 
 let arrayNumber1 = "";
+let display = ""
 let operator = [];
-let num1;
+let num1 = 1;
+let AllNumbers = [];
 console.log();
 function saveValueNumber(num) {
-    let AllNumbers = [];
+    let result = 0 ;
     switch (num.value * 0) {
         case 0:
             arrayNumber1 += num.value
-            current.innerHTML = arrayNumber1
+            display += num.value
+            current.innerHTML = display
             break;
     }
     switch (num.value) {
         case "+":
             if (arrayNumber1[arrayNumber1.length - 1] * 0 == 0) {
                 arrayNumber1 += num.value
-                current.innerHTML = arrayNumber1
             }
+            display += num.value
+            current.innerHTML = display
             break;
         case "-":
             if (arrayNumber1[arrayNumber1.length - 1] * 0 == 0) {
                 arrayNumber1 += num.value
-                current.innerHTML = arrayNumber1
             }
+            display += num.value
+            current.innerHTML = display
             break;
         case "*":
             if (arrayNumber1[arrayNumber1.length - 1] * 0 == 0) {
                 arrayNumber1 += num.value
-                current.innerHTML = arrayNumber1
             }
+            display += num.value
+            current.innerHTML = display
             break;
         case "/":
             if (arrayNumber1[arrayNumber1.length - 1] * 0 == 0) {
                 arrayNumber1 += num.value
-                current.innerHTML = arrayNumber1
+            }
+            display += num.value
+            current.innerHTML = display
+            break;
+    }
+    switch (arrayNumber1[arrayNumber1.length - 1]) {
+        case "+":
+                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length-1))
+                result += parseInt(AllNumbers[counter++])
+                // AllNumbers =[]
+                previous.innerText = result
+                console.log(result);
+                arrayNumber1 = ""
+            break;
+        case "-":
+            if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
+                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
+                operator.push(arrayNumber1[arrayNumber1.length - 1])
+                arrayNumber1 = ""
             }
             break;
-
-    }
-    for (let i = 0; i < arrayNumber1.length; i++) {
-        switch (arrayNumber1[i]) {
-            case "+":
-                AllNumbers.push(num1)
-                num2 = " "
-                operator.push(arrayNumber1[i])
-                break;
-            case "-":
-                AllNumbers.push(num1)
-                num2 = " "
-                operator.push(arrayNumber1[i])
-                break;
-            case "/":
-                AllNumbers.push(num1)
-                num2 = " "
-                operator.push(arrayNumber1[i])
-                break;
-            case "*":
-                AllNumbers.push(num1)
-                num2 = " "
-                operator.push(arrayNumber1[i])
-                break;
-            default:
-                num2 += arrayNumber1[i]
-                break;
-        }
-    }
-    let result = arrayNumber1[0];
-    for (let i = 0; i < arrayNumber1.length; i++) {
-        // switch (arrayNumber1[i]) {
-            case "+":
-                result +=
-                break;
-
-            default:
-
-                break;
-        }
+        case "*":
+            if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
+                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
+                operator.push(arrayNumber1[arrayNumber1.length - 1])
+                arrayNumber1 = ""
+            }
+            break;
+        case "/":
+            if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
+                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
+                operator.push(arrayNumber1[arrayNumber1.length - 1])
+                arrayNumber1 = ""
+            }
+            break;
     }
     console.log(AllNumbers);
+    console.log(operator);
+    console.log(arrayNumber1);
+    console.log(display);
+    // console.log(operator);
+
+
+
+
 }
+
 
 let num2 = ""
 function summm() {
