@@ -138,7 +138,7 @@ let num1 = 1;
 let AllNumbers = [];
 console.log();
 function saveValueNumber(num) {
-    let result = 0 ;
+    let result = 0;
     switch (num.value * 0) {
         case 0:
             arrayNumber1 += num.value
@@ -176,51 +176,49 @@ function saveValueNumber(num) {
             current.innerHTML = display
             break;
     }
-    switch (arrayNumber1[arrayNumber1.length - 1]) {
-        case "+":
-                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length-1))
-                result += parseInt(AllNumbers[counter++])
+
+    for (let i = 0; i < AllNumbers.length; i++) {
+        switch (arrayNumber1[arrayNumber1.length - 1]) {
+            case "+":
+                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
+                result += parseInt(AllNumbers)
                 // AllNumbers =[]
                 previous.innerText = result
                 console.log(result);
                 arrayNumber1 = ""
-            break;
-        case "-":
-            if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
-                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
-                operator.push(arrayNumber1[arrayNumber1.length - 1])
-                arrayNumber1 = ""
-            }
-            break;
-        case "*":
-            if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
-                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
-                operator.push(arrayNumber1[arrayNumber1.length - 1])
-                arrayNumber1 = ""
-            }
-            break;
-        case "/":
-            if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
-                AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
-                operator.push(arrayNumber1[arrayNumber1.length - 1])
-                arrayNumber1 = ""
-            }
-            break;
+                break;
+            case "-":
+                if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
+                    AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
+                    operator.push(arrayNumber1[arrayNumber1.length - 1])
+                    arrayNumber1 = ""
+                }
+                break;
+            case "*":
+                if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
+                    AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
+                    operator.push(arrayNumber1[arrayNumber1.length - 1])
+                    arrayNumber1 = ""
+                }
+                break;
+            case "/":
+                if (arrayNumber1[arrayNumber1.length - 1] * 0 != 0) {
+                    AllNumbers.push(arrayNumber1.substring(0, arrayNumber1.length - 1))
+                    operator.push(arrayNumber1[arrayNumber1.length - 1])
+                    arrayNumber1 = ""
+                }
+                break;
+        }
+        console.log(AllNumbers);
+        console.log(operator);
+        console.log(arrayNumber1);
+        console.log(display);
+        // console.log(operator);
+
+
+
     }
-    console.log(AllNumbers);
-    console.log(operator);
-    console.log(arrayNumber1);
-    console.log(display);
-    // console.log(operator);
 
-
-
-
-}
-
-
-let num2 = ""
-function summm() {
 }
 
 function resetAC(ac) {
