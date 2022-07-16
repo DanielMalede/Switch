@@ -31,3 +31,7 @@
 #Equal{
     grid-area: side;
 }
+
+section + p{
+    color: red;
+}
